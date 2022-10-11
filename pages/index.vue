@@ -19,7 +19,7 @@
     <div class="w-full flex flex-col items-center p-20">
       <div class="max-w-6xl w-full flex flex-col">
         <h2 class="text-5xl font-semibold">Dive right in</h2>
-        <div class="w-full h-20 mt-5 flex flex-row flex-wrap">
+        <div class="w-full mt-5 flex flex-row flex-wrap">
           <div class="w-56 h-56 m-5 bg-red-500 rounded-xl" v-for="item in Array(8)">
           </div>
         </div>
