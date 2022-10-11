@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row justify-around font-semibold"
+    class="flex flex-row justify-around text-lg font-semibold"
   >
     <NuxtLink to="/books">
       <div class="mx-4">
