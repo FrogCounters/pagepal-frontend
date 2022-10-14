@@ -24,6 +24,7 @@
           </div>
         </div>
       </div>
+      {{post}}
     </div>
   </div>
 </template>
@@ -31,6 +32,21 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      post: []
+    }
+  },
+  methods: {
+    getPosts() {
+      fetch('http://127.0.0.1:8000/books')
+        .then(response => response.json())
+        .then(data => this.post = data)
+    }
+  },
+  mounted() {
+    this.getPosts()
+  }
 }
 </script>
 
