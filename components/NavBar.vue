@@ -12,5 +12,10 @@
         About
       </div>
     </NuxtLink>
+    <NuxtLink to="/analyse">
+      <div class="mx-4">
+        Analysis
+      </div>
+    </NuxtLink>
   </div> 
 </template>
