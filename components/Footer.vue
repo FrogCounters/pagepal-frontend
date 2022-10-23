@@ -7,3 +7,9 @@
     </div>
   </div> 
 </template>
+
+<style scoped>
+* {
+  background-color: white;
+}
+</style>
