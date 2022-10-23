@@ -1,16 +1,15 @@
 <template>
   <div class="mx-3">
     <form @submit.prevent="submit">
-      <textarea v-model="message" rows="10" class="p-2.5 w-full rounded-lg border"
+      <textarea v-model="text" rows="10" class="p-2.5 w-full rounded-lg border"
         placeholder="Insert your story here..."></textarea>
-
-      <p>Preview:</p>
-      <p style="white-space: pre-line;">
-        {{message}}
-      </p>
-
-      <button class="rounded-full" style="background: #2FB195">Analyse</button>
+      <button class="text-white font-bold py-2 px-4 border rounded"  style="background: #2FB195">Analyse</button>
     </form>
+
+    <p style="white-space: pre-line;">
+        {{text}}
+    </p>
+    {{emotions}}
   </div>
 </template>
 
@@ -21,21 +20,24 @@ export default {
   name: "AnalysisPage",
   data() {
     return {
-      message: '',
+      text: '',
+      emotions: []
     }
   },
   methods: {
     submit() {
-      fetch("http://127.0.0.1:8000/book/",
+      fetch("http://127.0.0.1:8000/analyse/",
         {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
           method: "POST",
-          body: JSON.stringify({ title: "insert title", author: "mr tan", emotions: [1,-12,3], text: ["sentence1", "sentence2", "sentence3"], url: "https://testing.com", main_img: "img_link"})
+          body: JSON.stringify({ text: this.text })
         })
-        .then(res => console.log(this.message))
+        .then(res => res.json())
+        .then(res => this.emotions = res["emotions"])
+        .then(res => console.log(res))
         .catch(err => console.log(err))
     }
   }
