@@ -1,8 +1,10 @@
 $defaultFont: "Baloo 2";
 $fontColor: #252525;
 $greenAccentColor: #2FB195;
+$backgroundColor: #FDFDFD;
 
 body {
   font-family: $defaultFont;
   color: $fontColor;
+  background-color: $backgroundColor;
 }

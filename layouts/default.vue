@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen flex flex-col justify-start bg-gray-100"
+    class="min-h-screen flex flex-col justify-start"
   >
     <Header />
     <Nuxt />
