@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full flex flex-row justify-between p-6 items-center"
+    class="relative w-full flex flex-row justify-between p-6 items-center shadow"
   >
     <div id="header-logo">
       <NuxtLink to="/">
@@ -10,3 +10,9 @@
     <NavBar />
   </div> 
 </template>
+
+<style scoped>
+* {
+  background-color: white;
+}
+</style>
