@@ -1,7 +1,7 @@
 import { useRoute } from 'vue-router';
 
 <template>
-  <div>
+  <div class="flex flex-col items-center p-4 pb-12">
     <div class="text-center">
       <h2 class="text-5xl font-semibold">
         {{book.title}}
@@ -11,7 +11,7 @@ import { useRoute } from 'vue-router';
 
     <!-- <img :src="https://upload.wikimedia.org/wikipedia/en/f/fe/CharlotteWeb.png" alt={{book.title}} /> -->
 
-    <div class="mx-3 mt-3">
+    <div class="max-w-5xl mt-8">
       <span v-for="(p, index) in book.text">
         <span v-if="Number(book.emotions[String(index)]) < 0"
           class="leading-10 bg-red-200">{{String(p).replaceAll("\\n", "")}}</span>
