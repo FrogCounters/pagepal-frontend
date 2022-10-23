@@ -2,7 +2,7 @@
   <div class="inline relative">
     <div
       v-if="emotions.length"
-      class="absolute px-1 inline -top-4 rounded-lg text-xs border-2 bg-white whitespace-nowrap"
+      class="absolute px-1 inline -top-8 rounded-lg border-2 bg-white whitespace-nowrap"
     >
       <span v-for="emotion in emotions" :key="emotion" class="capitalize">
         {{ emotion }}
@@ -11,7 +11,7 @@
     </div>
     <span
       :class="
-        ['leading-10', 'inline', 'mt-4'].concat(
+        ['text', 'inline', 'mt-4', 'text-xl'].concat(
           emotions.map((x) => 'emotion-' + x)
         )
       "
@@ -55,6 +55,10 @@ export default {
 </script>
 
 <style scoped>
+.text {
+  line-height: 3.5rem;
+}
+
 /* rage */
 .emotion-anger {
   background-color: hsla(0, 58%, 70%, 1);

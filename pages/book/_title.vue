@@ -10,7 +10,7 @@ import { useRoute } from 'vue-router';
     </div>
 
     <!-- <img :src="https://upload.wikimedia.org/wikipedia/en/f/fe/CharlotteWeb.png" alt={{book.title}} /> -->
-    <div class="max-w-5xl mt-8">
+    <div class="max-w-6xl mt-8">
       <EmoText
         v-for="(text, index) in book.text"
         :key="index"
