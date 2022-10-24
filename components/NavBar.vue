@@ -7,14 +7,14 @@
         Books
       </div>
     </NuxtLink>
-    <NuxtLink to="/about">
-      <div class="mx-4">
-        About
-      </div>
-    </NuxtLink>
     <NuxtLink to="/analyse">
       <div class="mx-4">
         Analysis
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/about">
+      <div class="mx-4">
+        About
       </div>
     </NuxtLink>
   </div> 
