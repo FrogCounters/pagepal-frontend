@@ -10,7 +10,7 @@
         <h2 class="text-5xl mb-4">What is PagePal?</h2>
         <p class="text-xl">
           PagePal uses
-          <NuxtLink to="https://www.expert.ai/">expertai</NuxtLink>'s natural
+          <a href="https://www.expert.ai/" target="_blank">expertai</a>'s natural
           language processing (NLP) API to analyse children's books and output
           emotional analysis of the different portions of the books. This helps
           to develop language-emotion associations for your child at their most
@@ -24,7 +24,7 @@
         <p class="text-xl">
           PagePal is suitable for children at all levels of reading. Our book
           catalogue contains a range of difficulties, and you can use our
-          <NuxtLink to="/analysis">custom book upload</NuxtLink> feature to
+          <NuxtLink to="/analyse">custom book upload</NuxtLink> feature to
           upload the books you wish for your child to read!
           <br />
           We encourage you to use PagePal and go through books and emotions with
