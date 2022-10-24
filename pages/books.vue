@@ -1,9 +1,10 @@
 <template>
-  <div>
-    <div v-for="title in books">
-      <NuxtLink :to="'/book/' + title">
-        Click me: {{title}}
-      </NuxtLink>
+  <div class="w-full flex flex-col items-center">
+    <div class="w-full max-w-4xl flex flex-col mt-16 mb-8">
+      <h2 class="text-5xl font-semibold">Our Catalogue</h2>
+    </div>
+    <div class="w-full max-w-4xl mx-auto flex flex-col items-center p-4">
+      <BookElement v-for="title in books" :key="title" :title="title" />
     </div>
   </div>
 </template>
