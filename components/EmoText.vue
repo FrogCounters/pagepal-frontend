@@ -16,7 +16,7 @@
         )
       "
       >{{ text }}</span
-    >
+    >&nbsp;
   </div>
 </template>
 

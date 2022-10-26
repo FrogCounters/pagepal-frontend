@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      book: { text: '', main_img: '', emotions: [] },
+      book: { text: [], main_img: '', emotions: [] },
     }
   },
   async asyncData({ params }) {

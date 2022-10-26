@@ -7,9 +7,9 @@
         Books
       </div>
     </NuxtLink>
-    <NuxtLink to="/analyse">
+    <NuxtLink to="/custom">
       <div class="mx-4">
-        Analysis
+        Custom
       </div>
     </NuxtLink>
     <NuxtLink to="/about">

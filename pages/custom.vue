@@ -11,13 +11,25 @@
       <button class="text-white font-bold py-2 px-4 border rounded" @click="analyse_text">Analyse</button>
       <button class="text-white font-bold py-2 px-4 border rounded" @click="save_text" v-if="show_generate_btn">Generate URL</button>
       <button class="text-white font-bold py-2 px-4 border rounded" @click="showModal = true" v-if="show_url_btn">Show URL</button>      
-      <p style="white-space: pre-line;">
-        <h2 class="text-5xl font-semibold">
+      <div class="mt-4">
+        <h2 class="text-3xl my-2 font-semibold">Preview:</h2>
+        <h3 class="text-2xl my-2 font-semibold">
           {{ title }}
-        </h2>
-        {{ text }}
-      </p>
-      {{ emotions }}
+        </h3>
+        <div class="max-w-5xl mt-8 border rounded bg-white px-4">
+          <EmoText
+            v-for="(text, index) in sentences"
+            :key="index"
+            :text="text"
+            :emotions="
+              emotions[index]
+                .split(',')
+                .slice(0, -1)
+                .map((x) => x.toLowerCase())
+            "
+          />
+        </div>
+      </div>
     </div>
     <SavedModal v-show="showModal" @close-modal="showModal = false" :custom_url="custom_url" />
   </div>
@@ -28,13 +40,14 @@
 import SavedModal from '~/components/Modal.vue'
 
 export default {
-  name: "AnalysisPage",
+  name: "CustomBook",
   components: { SavedModal },
   data() {
     return {
       title: '',
       text: '',
       custom_url: '',
+      sentences: [],
       emotions: [],
       loading: false,
       show_generate_btn: false,
@@ -55,7 +68,10 @@ export default {
             body: JSON.stringify({ text: this.text })
           })
           .then(res => res.json())
-          .then(res => this.emotions = res["emotions"])
+          .then(res => {
+            this.emotions = res["emotions"]
+            this.sentences = res["sentences"]
+          })
           .catch(err => console.log(err))
           .finally(() => {
             this.loading = false
@@ -70,7 +86,7 @@ export default {
               'Content-Type': 'application/json'
             },
             method: "POST",
-            body: JSON.stringify({ title: this.title, text: String(this.text).split(".").map(x => x + "."), emotions: this.emotions, hate_speech: [] })
+            body: JSON.stringify({ title: this.title, text: this.sentences, emotions: this.emotions, hate_speech: [] })
           })
           .then(res => res.json())
           .then(res => {
