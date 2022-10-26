@@ -23,7 +23,6 @@ export default {
       fetch('http://127.0.0.1:8000/books/')
         .then(response => response.json())
         .then(data => this.books = data["books"])
-        .then(data => console.log(data))
     }
   },
   mounted() {
