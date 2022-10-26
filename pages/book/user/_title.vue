@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router';
   <BookText :book="book"></BookText>
 </template>
 
+
 <script>
 export default {
   data() {
@@ -17,11 +18,11 @@ export default {
   },
   methods: {
     getBooks() {
-      fetch(`http://127.0.0.1:8000/book/${this.$route.params.title}`)
+      fetch(`http://127.0.0.1:8000/user_book/${this.$route.params.title}`)
         .then((response) => response.json())
         .then((data) => data[this.$route.params.title])
         .then((data) => (this.book = data))
-        .then((data) => console.log(data))
+        .then((data) => console.log(this.book))
     },
   },
   mounted() {

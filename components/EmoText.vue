@@ -40,6 +40,8 @@ export default {
         anger: 'twa-rage',
         fear: 'twa-fearful',
         happiness: 'twa-relaxed',
+        sadness: 'twa-cry',
+        hatred: 'twa-imp',
         like: 'twa-smiley',
         joy: 'twa-joy',
         love: 'twa-heart-eyes',
