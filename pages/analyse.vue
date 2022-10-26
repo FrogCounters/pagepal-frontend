@@ -70,7 +70,7 @@ export default {
               'Content-Type': 'application/json'
             },
             method: "POST",
-            body: JSON.stringify({ title: this.title, text: String(this.text).split("."), emotions: this.emotions, hate_speech: [] })
+            body: JSON.stringify({ title: this.title, text: String(this.text).split(".").map(x => x + "."), emotions: this.emotions, hate_speech: [] })
           })
           .then(res => res.json())
           .then(res => {
