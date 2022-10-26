@@ -1,5 +1,3 @@
-import { useRoute } from 'vue-router';
-
 <template>
   <BookText :book="book"></BookText>
 </template>
