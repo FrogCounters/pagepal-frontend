@@ -4,7 +4,7 @@
       <h2 class="text-5xl font-semibold">Our Catalogue</h2>
     </div>
     <div class="w-full max-w-4xl mx-auto flex flex-col items-center p-4">
-      <BookElement v-for="title in books" :key="title" :title="title" />
+      <BookElement v-for="book in books" :key="book.title" :title="book.title" :author="book.author" :main_img="book.main_img" />
     </div>
   </div>
 </template>

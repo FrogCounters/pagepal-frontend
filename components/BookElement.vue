@@ -3,7 +3,7 @@
     <NuxtLink :to="'/book/'+title">
       <div class="w-full h-32 flex flex-row flex-wrap">
         <div class="w-32">
-          <img class="h-32 mr-4" src="https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="">
+          <img class="h-32 mr-4" :src="main_img" alt="">
         </div>
         <div class="flex flex-col">
           <h3 class="my-4 text-3xl">{{ title }}</h3>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'EmoText',
+  name: 'BookElement',
   props: {
     title: {
       type: String,
@@ -25,6 +25,10 @@ export default {
     author: {
       type: String,
       default: "Unknown",
+    },
+    main_img: {
+      type: String,
+      default: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png",
     }
   },
 }

@@ -35,11 +35,10 @@
       <div class="max-w-6xl w-full flex flex-col">
         <h2 class="text-5xl font-semibold">More books</h2>
         <div class="w-full mt-5 flex flex-row flex-wrap">
-          <div class="w-56 h-56 m-5 bg-red-500 rounded-xl" v-for="item in Array(8)">
+          <BookPreview v-for="book in books" :key="book.title" :title="book.title" :main_img="book.main_img" />
           </div>
         </div>
       </div>
-      {{post}}
     </div>
   </div>
 </template>
@@ -49,14 +48,14 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      post: []
+      books: []
     }
   },
   methods: {
     getPosts() {
-      fetch('http://127.0.0.1:8000/books')
+      fetch('http://127.0.0.1:8000/books/')
         .then(response => response.json())
-        .then(data => this.post = data)
+        .then(data => this.books = data["books"])
     }
   },
   mounted() {
