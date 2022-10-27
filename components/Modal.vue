@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     copy() {
-      navigator.clipboard.writeText("http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/book/user/" + this.custom_url);
+      navigator.clipboard.writeText("https://bookpal1.herokuapp.com/book/user/" + this.custom_url);
       this.has_copied = true
     }
   }

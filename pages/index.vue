@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     getPosts() {
-      fetch('http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/books/')
+      fetch('https://bookpal1.herokuapp.com/books/')
         .then(response => response.json())
         .then(data => this.books = data["books"])
     }

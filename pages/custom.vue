@@ -58,7 +58,7 @@ export default {
   methods: {
     analyse_text() {
       this.loading = true,
-        fetch("http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/analyse/",
+        fetch("https://bookpal1.herokuapp.com/analyse/",
           {
             headers: {
               'Accept': 'application/json',
@@ -79,7 +79,7 @@ export default {
           })
     },
     save_text() {
-      fetch("http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/user_book/",
+      fetch("https://bookpal1.herokuapp.com/user_book/",
           {
             headers: {
               'Accept': 'application/json',
