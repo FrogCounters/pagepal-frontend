@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getBooks() {
-      fetch(`https://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/book/${this.$route.params.title}`)
+      fetch(`http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/book/${this.$route.params.title}`)
         .then((response) => response.json())
         .then((data) => data[this.$route.params.title])
         .then((data) => (this.book = data))
