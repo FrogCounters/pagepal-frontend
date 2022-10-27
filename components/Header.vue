@@ -4,7 +4,7 @@
   >
     <div id="header-logo">
       <NuxtLink to="/">
-        <img src="~/assets/img/Logo.png" width="120" alt="PagePal Logo">
+        <img src="/_nuxt/img/logo.b1a5335.png" width="120" alt="PagePal Logo">
       </NuxtLink>
     </div>
     <NavBar />

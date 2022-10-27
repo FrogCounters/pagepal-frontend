@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     copy() {
-      navigator.clipboard.writeText("https://bookpal1.herokuapp.com/book/user/" + this.custom_url);
+      navigator.clipboard.writeText("https://main.d2s3ylptdaf8im.amplifyapp.com/book/user/" + this.custom_url);
       this.has_copied = true
     }
   }
