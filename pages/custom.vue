@@ -58,7 +58,7 @@ export default {
   methods: {
     analyse_text() {
       this.loading = true,
-        fetch("http://127.0.0.1:8000/analyse/",
+        fetch("http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/analyse/",
           {
             headers: {
               'Accept': 'application/json',
@@ -79,7 +79,7 @@ export default {
           })
     },
     save_text() {
-      fetch("http://127.0.0.1:8000/user_book/",
+      fetch("http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/user_book/",
           {
             headers: {
               'Accept': 'application/json',

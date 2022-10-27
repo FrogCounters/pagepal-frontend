@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     getBooks() {
-      fetch('http://127.0.0.1:8000/books/')
+      fetch('http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/books/')
         .then(response => response.json())
         .then(data => this.books = data["books"])
     }

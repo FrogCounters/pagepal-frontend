@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     getBooks() {
-      fetch(`http://127.0.0.1:8000/user_book/${this.$route.params.title}`)
+      fetch(`http://pagepal-backend-dev.ap-southeast-1.elasticbeanstalk.com/user_book/${this.$route.params.title}`)
         .then((response) => response.json())
         .then((data) => data[this.$route.params.title])
         .then((data) => (this.book = data))
